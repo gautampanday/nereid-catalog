@@ -99,6 +99,9 @@ class ProductTemplate:
         fields.One2Many('product.product', None, 'Products (Disp. on eShop)'),
         'get_products_displayed_on_eshop'
     )
+
+    long_description = fields.Text('Long Description')
+    
     description = fields.Text("Description")
     media = fields.One2Many("product.media", "template", "Media")
     images = fields.Function(
@@ -150,6 +153,7 @@ class Product:
     uri = fields.Char(
         'URI', select=True, states=DEFAULT_STATE2
     )
+
     displayed_on_eshop = fields.Boolean('Displayed on E-Shop?', select=True)
 
     media = fields.One2Many("product.media", "product", "Media")

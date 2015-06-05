@@ -11,6 +11,9 @@ this repository contains the full copyright notices and license terms. -->
         <page string="Description" id="template-description">
             <field name="description"/>
         </page>
+        <page string="LongDescription" id="template-long-description">
+            <field name="long_description"/>
+        </page>
         <page string="Media" id="template-media">
             <field name="media" colspan="4"/>
         </page>
